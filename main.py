@@ -1,6 +1,4 @@
 import pickle
-
-import torch
 from flask import Flask
 import pandas as pd
 import numpy as np
