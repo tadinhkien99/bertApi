@@ -1,6 +1,5 @@
 import torch
 from flask import Flask
-from bertopic import BERTopic
 import pandas as pd
 import numpy as np
 app= Flask(__name__)
