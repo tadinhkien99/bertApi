@@ -15,4 +15,4 @@ def index():
   topics, probabilities = model2.fit_transform(data['Complaint description'], embeddings_2)
   result = model2.get_topic(3)
   # print(result)
-  return result
+  return str(result)
