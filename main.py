@@ -1,3 +1,5 @@
+import pickle
+
 import torch
 from flask import Flask
 import pandas as pd
@@ -10,7 +12,8 @@ def index():
   data = data[['Complaint description']]
   embeddings_2 = np.load('embeddings.npy')
   # model2 = BERTopic(language="english")
-  model2 = torch.load('model.pth')
+  # model2 = torch.load('model.pth')
+  model2 = pickle.load(open("model.sav", 'rb'))
   topics, probabilities = model2.fit_transform(data['Complaint description'], embeddings_2)
   result = model2.get_topic(3)
   # print(result)
